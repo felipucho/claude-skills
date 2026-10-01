@@ -43,7 +43,29 @@ Ver [plugins.md](plugins.md). Incluye `claude-seo` (familia `seo-*`).
 |---|---|---|
 | `codebase-memory` (skill + MCP + agentes) | [DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) | Primero `claude mcp list`: si ya aparece `codebase-memory-mcp` conectado, no hacer nada. Si no, descargar `install.ps1` del repo, revisarlo y ejecutarlo; reiniciar Claude Code |
 
-## 4. Pasos manuales al final
+## 4. Configuración
+
+Archivos en [config/](config):
+
+| Archivo | Destino | Qué hace |
+|---|---|---|
+| `config/CLAUDE.md` | `~/.claude/CLAUDE.md` | Reglas globales: caveman ultra, buscar código siempre con el índice de codebase-memory, usar skills antes de improvisar (tabla tarea → skill), ahorro de tokens |
+| `config/caveman-config.json` | Windows: `%APPDATA%\caveman\config.json` · macOS/Linux: `~/.config/caveman/config.json` | Caveman arranca en `ultra` |
+
+Además:
+
+```bash
+# Indexar repos automáticamente al abrirlos
+codebase-memory-mcp config set auto_index true
+```
+
+En `~/.claude/settings.json`, agregar (sin pisar el resto) para apagar el hook GateGuard de ECC:
+
+```json
+"env": { "ECC_GATEGUARD": "off" }
+```
+
+## 5. Pasos manuales al final
 
 1. Reiniciar Claude Code.
 2. `/plugin configure ecc@ecc`.
@@ -60,7 +82,8 @@ Ver [plugins.md](plugins.md). Incluye `claude-seo` (familia `seo-*`).
 | Warning `install scripts not yet covered by allowScripts` al instalar `@anthropic-ai/claude-code` | npm nuevo no corre postinstall por defecto | Inofensivo: `claude --version` funciona igual |
 | `marketplace add obra/superpowers` crea `superpowers-dev` | No es el marketplace que se usa | No agregarlo; `superpowers` sale de `claude-plugins-official` |
 | `2 userConfig options not yet set` al instalar `ecc` | ECC pide configuración | `/plugin configure ecc@ecc` dentro de Claude Code |
-| Hook `[Fact-Forcing Gate]` bloquea el primer Bash/Write | Hook GateGuard de ECC | Responder los datos que pide y reintentar, o `ECC_GATEGUARD=off` |
+| Hook `[Fact-Forcing Gate]` bloquea el primer Bash/Write | Hook GateGuard de ECC | `"env": { "ECC_GATEGUARD": "off" }` en `settings.json` (sección 4) |
+| codebase-memory no indexa solo | `auto_index` viene en `false` | `codebase-memory-mcp config set auto_index true` |
 
 Reglas:
 
