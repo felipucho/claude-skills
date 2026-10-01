@@ -47,7 +47,33 @@ Load the ONE best skill, not several overlapping ones.
 | Create skill / find skill | `skill-creator`, `find-skills` |
 | Claude API / SDK | `claude-api` |
 
-## 4. Token saving
+## 4. ECC plugin: disabled, read on demand
+ECC (~290 skills, 80 agents) is installed but disabled to save tokens. Its files stay on disk:
+`~/.claude/plugins/cache/ecc/ecc/<version>/skills/<name>/SKILL.md` and `.../agents/<name>.md` (glob `ecc/ecc/*/` for version).
+- Task matches skill below and no own skill covers it: Read ONLY that SKILL.md (or agent .md) and follow it. Do not enable plugin, do not list whole folder.
+- Need ECC slash commands, hooks, or agents as subagent_type: tell user to run `claude plugin enable ecc@ecc` + restart; `claude plugin disable ecc@ecc` after.
+
+| Task | ECC skill / agent |
+|---|---|
+| Context/token budget, when to compact | `strategic-compact`, `context-budget`, `token-budget-advisor` |
+| React / frontend patterns, perf | `react-patterns`, `react-performance`, `frontend-patterns` |
+| Next.js / Vite | `nextjs-turbopack`, `vite-patterns` |
+| Accessibility (WCAG) | `accessibility`, `frontend-a11y`; agent `a11y-architect` |
+| Motion deep dive | `motion-foundations`, `motion-patterns`, `motion-advanced` |
+| UI feel, glass style | `make-interfaces-feel-better`, `liquid-glass-design` |
+| Dashboard | `dashboard-builder` |
+| Slides in HTML | `frontend-slides` |
+| Video with code | `remotion-video-creation` |
+| Browser QA / E2E | `browser-qa`, `e2e-testing` |
+| TDD | `tdd-workflow` |
+| API / backend / errors | `api-design`, `backend-patterns`, `error-handling` |
+| DB | `postgres-patterns`, `prisma-patterns` |
+| Docker / deploy | `docker-patterns`, `deployment-patterns` |
+| GitHub ops | `github-ops` |
+| Research before building | `search-first`, `deep-research` |
+| Review agents | `react-reviewer`, `typescript-reviewer`, `security-reviewer`, `performance-optimizer`, `build-error-resolver` |
+
+## 5. Token saving
 - Search with index (sec. 2). Read files with `offset`/`limit` when location known. Never re-read file after Edit/Write.
 - Grep: `files_with_matches` first, `head_limit`, narrow `glob`/`type`.
 - Long command output: `tail`/`head`/filters. Never dump full logs.

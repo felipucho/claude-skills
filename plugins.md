@@ -14,18 +14,19 @@ claude plugin install caveman@caveman
 claude plugin marketplace add anthropics/claude-plugins-official
 claude plugin install frontend-design@claude-plugins-official
 
-claude plugin marketplace add affaan-m/ECC
-claude plugin install ecc@ecc
-
 claude plugin marketplace add AgriciDaniel/claude-seo
 claude plugin install claude-seo@agricidaniel-claude-seo
 ```
 
-Después, dentro de Claude Code: `/plugin configure ecc@ecc` (pide 2 opciones) y `/seo setup`.
+Después, dentro de Claude Code: `/seo setup`.
 
 ## Instalados pero desactivados
 
 ```
+claude plugin marketplace add affaan-m/ECC
+claude plugin install ecc@ecc
+claude plugin disable ecc@ecc
+
 claude plugin install superpowers@claude-plugins-official
 claude plugin disable superpowers@claude-plugins-official
 
@@ -34,3 +35,5 @@ claude plugin disable vercel@claude-plugins-official
 ```
 
 > `superpowers` sale de `claude-plugins-official`. No hace falta `marketplace add obra/superpowers`: ese marketplace se registra como `superpowers-dev` y no se usa.
+
+> ECC queda desactivado para ahorrar tokens (~290 skills en cada sesión). `config/CLAUDE.md` indica qué skills suyas leer directo del disco. Para usar sus comandos o agentes: `claude plugin enable ecc@ecc`, reiniciar, y `/plugin configure ecc@ecc` la primera vez.

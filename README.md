@@ -68,7 +68,7 @@ En `~/.claude/settings.json`, agregar (sin pisar el resto) para apagar el hook G
 ## 5. Pasos manuales al final
 
 1. Reiniciar Claude Code.
-2. `/plugin configure ecc@ecc`.
+2. (Solo si activás ECC) `/plugin configure ecc@ecc`.
 3. `/seo setup`.
 
 ## Errores conocidos (instalación real en Windows, 2026-10)
