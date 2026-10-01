@@ -5,12 +5,12 @@ Abrí Claude Code en cualquier carpeta de la PC nueva y pegá esto:
 ````text
 Cloná https://github.com/felipucho/claude-skills (si es privado, usá `gh auth login` primero) en una carpeta temporal y dejá mi Claude Code con las mismas skills y plugins que en mi otra PC. Seguí este orden:
 
-1. Leé README.md, skills.txt y plugins.md del repo.
-2. Verificá que estén Node.js, git y la CLI `claude`. Si falta algo, decime qué instalar y esperá.
-3. Skills: corré install.ps1 (Windows) o install.sh (macOS/Linux). Si alguna falla, reintentala sola con `npx -y skills add <fuente> --skill <skill> -g -a claude-code -y` y anotá las que sigan fallando.
-4. Plugins: instalalos con la CLI (`claude plugin marketplace add <repo>` y `claude plugin install <plugin>`), según plugins.md. Los "instalados pero desactivados" instalalos y dejalos desactivados en settings.json.
-5. Instalaciones aparte (codebase-memory y claude-seo): bajá el script de instalación, mostrame qué hace y esperá mi confirmación antes de ejecutarlo. No ejecutes nada remoto sin revisarlo.
-6. Al final comprobá que cada skill de skills.txt exista en ~/.claude/skills y listame: instaladas, fallidas y pasos que tengo que hacer yo (reiniciar Claude Code, `/seo setup`).
+1. Leé README.md (sobre todo "Errores conocidos"), skills.txt y plugins.md del repo.
+2. Verificá que estén Node.js, git y la CLI `claude`. Si falta la CLI, instalala con `npm.cmd install -g @anthropic-ai/claude-code` (Windows) o `npm install -g @anthropic-ai/claude-code`. Si falta otra cosa, decime qué instalar y esperá. En Windows corré `npm`, `claude` y `skills` desde PowerShell con `.cmd`, no desde Git Bash.
+3. Skills: corré install.ps1 (Windows, con `powershell -ExecutionPolicy Bypass -File install.ps1`) o install.sh (macOS/Linux) en background y no lo cortes a mitad. Si alguna falla, reintentala sola con `skills add <fuente> --skill <skill> -g -a claude-code -y` y anotá las que sigan fallando.
+4. Plugins: seguí plugins.md con la CLI. Corré cada `marketplace add` de a uno, nunca en paralelo. Los "instalados pero desactivados" instalalos y desactivalos con `claude plugin disable`.
+5. codebase-memory: primero `claude mcp list`. Si ya está conectado, saltealo. Si no, bajá su script de instalación, mostrame qué hace y esperá mi confirmación antes de ejecutarlo. No ejecutes nada remoto sin revisarlo.
+6. Al final comprobá que cada skill de skills.txt exista en ~/.claude/skills y que los plugins aparezcan en `claude plugin list`. Listame: instaladas, fallidas y pasos que tengo que hacer yo (reiniciar Claude Code, `/plugin configure ecc@ecc`, `/seo setup`).
 
 No modifiques otros archivos de mi configuración. Si algo no coincide con lo que dice el repo, avisame en vez de improvisar.
 ````
