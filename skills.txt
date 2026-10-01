@@ -1,0 +1,52 @@
+# <fuente> <skill>
+# fuente = owner/repo de GitHub, o URL a una carpeta dentro de un repo.
+# Instaladas con `npx skills add` (CLI de vercel-labs/skills).
+
+vercel-labs/skills find-skills
+vercel-labs/agent-skills web-design-guidelines
+vercel-labs/agent-skills vercel-react-best-practices
+leonxlnx/taste-skill redesign-existing-projects
+leonxlnx/taste-skill design-taste-frontend
+conardli/garden-skills web-design-engineer
+coreyhaines31/marketingskills customer-research
+coreyhaines31/marketingskills copywriting
+coreyhaines31/marketingskills copy-editing
+coreyhaines31/marketingskills marketing-psychology
+coreyhaines31/marketingskills seo-audit
+cocoindex-io/cocoindex-code ccc
+nextlevelbuilder/ui-ux-pro-max-skill design-system
+nextlevelbuilder/ui-ux-pro-max-skill design
+nextlevelbuilder/ui-ux-pro-max-skill banner-design
+pbakaus/impeccable impeccable
+addyosmani/web-quality-skills seo
+emilkowalski/skills emil-design-eng
+emilkowalski/skills animate
+dietrichgebert/ponytail ponytail
+dietrichgebert/ponytail ponytail-review
+dietrichgebert/ponytail ponytail-audit
+dietrichgebert/ponytail ponytail-help
+dietrichgebert/ponytail ponytail-debt
+dietrichgebert/ponytail ponytail-gain
+101-skills/superpowers ai-image-generation
+
+# Skills oficiales de Anthropic
+anthropics/skills algorithmic-art
+anthropics/skills brand-guidelines
+anthropics/skills canvas-design
+anthropics/skills claude-api
+anthropics/skills doc-coauthoring
+anthropics/skills docx
+anthropics/skills frontend-design
+anthropics/skills internal-comms
+anthropics/skills mcp-builder
+anthropics/skills pdf
+anthropics/skills pptx
+anthropics/skills skill-creator
+anthropics/skills slack-gif-creator
+anthropics/skills theme-factory
+anthropics/skills web-artifacts-builder
+anthropics/skills webapp-testing
+anthropics/skills xlsx
+
+# Scrapling (la skill vive en una subcarpeta del repo)
+https://github.com/D4Vinci/Scrapling/tree/main/agent-skill/Scrapling-Skill scrapling-official
