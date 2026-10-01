@@ -2,6 +2,8 @@
 
 Direcciones de todas las skills, plugins y herramientas que uso en Claude Code, para reinstalarlas en otra PC.
 
+> Para que lo haga todo Claude: pegá el prompt de [PROMPT.md](PROMPT.md).
+
 ## 1. Skills
 
 Requiere Node.js. Desde la carpeta del repo:
