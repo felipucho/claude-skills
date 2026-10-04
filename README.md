@@ -49,7 +49,7 @@ Archivos en [config/](config):
 
 | Archivo | Destino | Qué hace |
 |---|---|---|
-| `config/CLAUDE.md` | `~/.claude/CLAUDE.md` | Reglas globales: caveman ultra, buscar código siempre con el índice de codebase-memory, usar skills antes de improvisar (tabla tarea → skill), ahorro de tokens |
+| `config/CLAUDE.md` | `~/.claude/CLAUDE.md` | Reglas globales: perfil, correcciones directas, caveman ultra, buscar código siempre con el índice de codebase-memory, usar skills antes de improvisar (tabla tarea → skill), cuándo usar subagentes, skills de ECC y Superpowers leídas del disco, ahorro de tokens |
 | `config/caveman-config.json` | Windows: `%APPDATA%\caveman\config.json` · macOS/Linux: `~/.config/caveman/config.json` | Caveman arranca en `ultra` |
 
 Además:
