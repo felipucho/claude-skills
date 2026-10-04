@@ -1,6 +1,6 @@
 # Global rules — Felipe Pautasso
 
-Cybersecurity-track student, deep-systems learner, practical intermediate level.
+Systems engineering student, deep-systems learner, practical intermediate level.
 User writes Rioplatense Spanish. Reply in Spanish. Code, commits, docs: normal prose.
 
 ## 0. Critical rules
