@@ -41,6 +41,7 @@ Subagent output lands in main context → prefer cavecrew (compressed). Need pro
 ## 4. Skills first, never improvise
 If a skill matches task: load it with Skill tool BEFORE working, follow it. No skill fits: say so, then work.
 Load the ONE best skill, not several overlapping ones. Invoke proactively, don't wait for user.
+Exception: any coding task (write, fix, refactor, pick deps) → load `ponytail` (full) once per session, before coding, on top of the task skill.
 
 | Task | Skill |
 |---|---|
@@ -58,7 +59,7 @@ Load the ONE best skill, not several overlapping ones. Invoke proactively, don't
 | Run app / see change working | `run` |
 | Test local web app | `webapp-testing` |
 | Code structure, callers, dead code | `codebase-memory` |
-| Over-engineering, simplest solution | `ponytail`, `ponytail-review`, `ponytail-audit` |
+| Over-engineering audit of diff / repo | `ponytail-review` / `ponytail-audit` |
 | Code review / security | `caveman:caveman-review` + `code-review` (+ `security-review` if auth/permissions/external input) |
 | Commit message | `caveman:caveman-commit` |
 | Token usage question | `caveman:caveman-stats` |
