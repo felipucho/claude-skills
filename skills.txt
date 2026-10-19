@@ -29,6 +29,11 @@ dietrichgebert/ponytail ponytail-debt
 dietrichgebert/ponytail ponytail-gain
 101-skills/superpowers ai-image-generation
 
+# Matt Pocock (grill-with-docs necesita grilling y domain-modeling)
+mattpocock/skills grill-with-docs
+mattpocock/skills grilling
+mattpocock/skills domain-modeling
+
 # Skills oficiales de Anthropic
 anthropics/skills algorithmic-art
 anthropics/skills brand-guidelines

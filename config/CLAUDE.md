@@ -80,6 +80,9 @@ Load the ONE best skill, not several overlapping ones. Invoke proactively, don't
 | MCP server | `mcp-builder` |
 | Create skill / find skill | `skill-creator`, `find-skills` |
 | Claude API / SDK | `claude-api` |
+| Plan / design / spec: interview before building (writes ADR + glossary) | `grill-with-docs` (user-invoked only: `/grill-with-docs`) |
+| Stress-test an idea without writing docs | `grilling` |
+| Domain terms, GLOSSARY.md, ADRs | `domain-modeling` |
 
 ## 5. Disabled plugins: read on demand
 ECC (~290 skills, 80 agents) and Superpowers are installed but disabled to save tokens. Files stay on disk:
